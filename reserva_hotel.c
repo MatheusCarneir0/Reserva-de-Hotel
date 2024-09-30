@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
 
 #define QUARTOS_DISPONIVEIS 50
 #define CAPACIDADE_TOTAL 100
@@ -201,11 +202,20 @@ void liberarLista(No* lista) {
     }
 }
 
+
+void limpar_terminal() {
+    #ifdef _WIN32
+        system("cls"); // Para Windows
+    #else
+        system("clear"); // Para Linux/Mac
+    #endif
+}
+
 int main() {
     No* lista = inicializarLista();
     int opcao, id;
     Reserva nova_reserva;
-
+    
     do {
         printf("\n--- Sistema de Reservas ---\n");
         printf("1. Inserir reserva\n");
@@ -215,13 +225,15 @@ int main() {
         printf("5. Sair\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
-
+        limpar_terminal();
+        
         switch (opcao) {
             case 1:
                 printf("\n--- Tabela de Preços ---\n");
-                printf("Preço por pessoa por diária: R$ %.2f\n", PRECO_RESERVA);
-
-                printf("ID: ");
+                printf("Preço da diária por pessoa: R$ %.2f\n", PRECO_RESERVA);
+                
+                printf("\n--- Cadastrar Reserva ---\n");
+                printf("\nID: ");
                 scanf("%d", &nova_reserva.id);
                 printf("Nome do cliente: ");
                 scanf(" %[^\n]", nova_reserva.nome_cliente);
@@ -234,19 +246,25 @@ int main() {
 
                 lista = inserirReserva(lista, nova_reserva);
                 break;
+                limpar_terminal();
             case 2:
+                printf("--- Remover Reserva ---\n");
                 printf("ID da reserva a remover: ");
                 scanf("%d", &id);
                 lista = removerReserva(lista, id);
                 break;
+                limpar_terminal();
             case 3:
+                printf("--- Buscar Reserva ---\n");
                 printf("ID da reserva a buscar: ");
                 scanf("%d", &id);
                 buscarReserva(lista, id);
                 break;
+                
             case 4:
                 exibirReservas(lista);
                 break;
+                limpar_terminal();
             case 5:
                 printf("Saindo...\n");
                 liberarLista(lista);
