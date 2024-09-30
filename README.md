@@ -17,5 +17,5 @@ Este é um simples sistema de reservas de hotel em C, que permite gerenciar rese
 3. Execute o programa.
 
 ```bash
-gcc sistema_reservas.c -o sistema_reservas
+gcc sistema_reservas.c -o reserva_hotel
 ./reserva_hotel
