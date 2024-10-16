@@ -12,7 +12,7 @@ Este projeto é um sistema simples de reservas de hotel, utilizando uma lista du
 ## ⚙️ Estrutura do Projeto
 
 - **ReservaHotelGTK.c**: Código principal com todas as funcionalidades e a interface gráfica.
-- **style.css**: (Opcional) Estilos customizados para a interface gráfica.
+- **style.css**: Estilos customizados para a interface gráfica.
 
 Este sistema é ideal para pequenas operações de reservas e possui validações para evitar reservas sobrepostas para o mesmo quarto.
 
@@ -42,7 +42,6 @@ No terminal MSYS2, instale o GTK3 e o conjunto de ferramentas de desenvolvimento
    ```bash
    pacman -S mingw-w64-x86_64-gtk3 mingw-w64-x86_64-toolchain
    
-   ```bash
    pacman -S mingw-w64-x86_64-toolchain mingw-w64-x86_64-pkg-config
 
 
@@ -67,7 +66,3 @@ Você pode adicionar o caminho manualmente executando o seguinte comando no term
     ```bash
     export PATH=/mingw64/bin:$PATH
 
-
-👩‍💻 Desenvolvedores
-[José Jhonata Vieira de Oliveira]
-[Larissa Vieira de Oliveira]
