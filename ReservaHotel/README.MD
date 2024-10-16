@@ -1,14 +1,19 @@
-🏨 Sistema de Reservas de Hotel
+# 🏨 Sistema de Reservas de Hotel
+
 Este projeto é um sistema simples de reservas de hotel, utilizando uma lista duplamente encadeada para gerenciar as reservas e a biblioteca GTK para criar uma interface gráfica interativa e responsiva.
 
-🚀 Funcionalidades
-➕ Inserir Reserva: Adicione uma nova reserva, especificando nome do cliente, quarto, data, número de diárias e pessoas.
-🗑️ Remover Reserva: Remova uma reserva da lista com base no número do quarto.
-🔍 Buscar Reserva: Encontre uma reserva pelo número do quarto e exiba seus detalhes.
-📅 Exibir Reservas: Veja todas as reservas registradas, ordenadas por data em um formato de lista.
-⚙️ Estrutura do Projeto
-ReservaHotelGTK.c: Código principal com todas as funcionalidades e a interface gráfica.
-style.css: (Opcional) Estilos customizados para a interface gráfica.
+## 🚀 Funcionalidades
+
+- ➕ **Inserir Reserva**: Adicione uma nova reserva, especificando o nome do cliente, quarto, data, número de diárias e número de pessoas.
+- 🗑️ **Remover Reserva**: Remova uma reserva da lista com base no número do quarto.
+- 🔍 **Buscar Reserva**: Encontre uma reserva pelo número do quarto e exiba seus detalhes.
+- 📅 **Exibir Reservas**: Veja todas as reservas registradas, ordenadas por data, em um formato de lista.
+
+## ⚙️ Estrutura do Projeto
+
+- **ReservaHotelGTK.c**: Código principal com todas as funcionalidades e a interface gráfica.
+- **style.css**: (Opcional) Estilos customizados para a interface gráfica.
+
 Este sistema é ideal para pequenas operações de reservas e possui validações para evitar reservas sobrepostas para o mesmo quarto.
 
 ## Pré-requisitos
